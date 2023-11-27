@@ -15,20 +15,55 @@ TCSVT 2023
 
 
 
-##### Working on CVPR recently. The code is comming soon.
+## Environment
+
+You can choose cudatoolkit version to match your server. The code is tested on PyTorch 2.0.1+cuda12.0.
+
+```shell
+conda create -n ssir python==3.10
+conda activate ssir
+# You can choose the PyTorch version you like, we recommand version >= 1.10.1
+# For example
+pip install torch==2.0.1 torchvision==0.15.2 torchaudio==2.0.2
+pip install -r requirements.txt
+```
+
+## Prepare the Data
+
+#### 1. Download and deploy the SREDS dataset
+
+please waiting for links
+
+#### 2. Set the path of RSSF dataset in your serve
+
+In the line25 of `main.py` or set that in command line when running main.py
+
+## Evaluate
+```shell
+cd shells
+bash eval_SREDS.sh
+```
+
+## Train
+```shell
+cd shells
+bash train_SSIR.sh
+```
+We recommended to redirect the output logs by adding
+`>> SSIR.txt 2>&1` 
+to the last of the above command for management.
 
 
-
-## Citations
+## Citation
 
 If you find this code useful in your research, please consider citing our paper.
 
 ```
-@inproceedings{zhao2022learning,
-  title={Learninng optical flow from continuous spike streams},
-  author={Zhao, Rui and Xiong, Ruiqin and Zhao, Jing and Yu, Zhaofei and Fan, Xiaopeng and Huang, Tiejun},
-  booktitle={Proceedings of the Annual Conference on Neural Information Processing Systems (NeurIPS)},
-  year={2022}
+@article{zhao2023spike,
+  title={Spike Camera Image Reconstruction Using Deep Spiking Neural Networks},
+  author={Zhao, Rui and Xiong, Ruiqin and Zhang, Jian and Yu, Zhaofei and Zhu, Shuyuan and Ma, Lei and Huang, Tiejun},
+  journal={IEEE Transactions on Circuits and Systems for Video Technology (TCSVT)},
+  year={2023},
 }
 ```
 
