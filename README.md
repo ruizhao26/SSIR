@@ -32,7 +32,21 @@ pip install -r requirements.txt
 
 #### 1. Download and deploy the SREDS dataset
 
-please waiting for links
+[BaiduNetDisk](https://pan.baidu.com/s/1clA43FcxjOibL1zGTaU82g) (Password: 2728)
+
+`train.tar` corresponds to the training data, and `test.tar` corresponds to the testing data.
+
+Move the above two `.tar` file to the `data root` directory and extract to the current directory
+
+```
+file directory:
+train:
+your_data_root/crop_mini/spike/...
+your_data_root/crop_mini/image/...
+test:
+your_data_root/spike/...
+your_data_root/imgs/...
+```
 
 #### 2. Set the path of RSSF dataset in your serve
 
