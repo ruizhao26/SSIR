@@ -55,13 +55,13 @@ In the line25 of `main.py` or set that in command line when running main.py
 ## Evaluate
 ```shell
 cd shells
-bash eval_SREDS.sh
+CUDA_VISIBLE_DEVICES=[] bash eval_SREDS.sh
 ```
 
 ## Train
 ```shell
 cd shells
-bash train_SSIR.sh
+CUDA_VISIBLE_DEVICES=[] bash train_SSIR.sh
 ```
 We recommended to redirect the output logs by adding
 `>> SSIR.txt 2>&1` 
